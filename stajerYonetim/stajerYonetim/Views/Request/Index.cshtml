@@ -1,0 +1,29 @@
+﻿@using stajerYonetim.Models
+@model List<Request>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Request_Layout.cshtml";
+}
+
+<table class="table table-bordered" style="color:white">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Surname</td>
+        <td>Company</td>
+        <td>Situation</td>
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ReqId</td>
+            <td>@x.ReqName</td>
+            <td>@x.ReqtSurname</td>
+            <td>@x.Company.CompName</td>
+            <td><a href="#" class="btn btn-primary">Situation</a></td>
+
+        </tr>
+    }
+</table>

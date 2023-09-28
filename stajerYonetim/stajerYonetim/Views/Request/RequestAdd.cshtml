@@ -1,0 +1,51 @@
+﻿@model Request
+@{
+    ViewData["Title"] = "RequestAdd";
+    Layout = null;
+}
+<br />
+<form class="form-group" method="post"  style="background-color:dimgrey">
+    <b style="color:white">UserName</b>
+    @Html.TextBoxFor(x=>x.UserName,new{@class="form-control"})
+    <br />
+    <b style="color:white">Password</b>
+    @Html.TextBoxFor(x=>x.Password,new{@class="form-control"})
+    <br />
+    <b style="color:white">Name</b>
+    @Html.TextBoxFor(x=>x.ReqName, new{@class="form-control"})
+    <br />
+    <b style="color:white">Surname</b>
+    @Html.TextBoxFor(x=>x.ReqtSurname, new{@class="form-control"})
+    <br />
+    <b style="color:white">Universty</b>
+    @Html.TextBoxFor(x=>x.ReqUni, new{@class="form-control"})
+    <br />
+    <b style="color:white">Department</b>
+    @Html.TextBoxFor(x=>x.ReqDepart, new{@class="form-control"})
+    <br />
+    <b style="color:white">Class</b>
+    @Html.TextBoxFor(x=>x.ReqClass, new{@class="form-control"})
+    <br />
+    <b style="color:white">Mail Address</b>
+    @Html.TextBoxFor(x=>x.ReqMail, new{@class="form-control"})
+    <br />
+    <b style="color:white">Phone Number</b>
+    @Html.TextBoxFor(x=>x.ReqNumber, new{@class="form-control"})
+    <br />
+    <b style="color:white">GitHub</b>
+    @Html.TextBoxFor(x=>x.ReqGitHub, new{@class="form-control"})
+    <br />
+    <b style="color:white">Leangues</b>
+    @Html.TextBoxFor(x=>x.ReqLengues, new{@class="form-control"})
+    <br />
+    <b style="color:white">Aim</b>
+    @Html.TextBoxFor(x=>x.ReqWant, new{@class="form-control"})
+    <br />
+    <b style="color:white">Company</b>
+    @Html.DropDownListFor(x=>x.Company.CompId,(List<SelectListItem>)ViewBag.cmp,new{@class="form-control"})
+    <br />
+   
+    <button class="btn btn-primary"> Create </button>
+</form>
+
+

@@ -1,0 +1,43 @@
+﻿@model Request
+@{
+    ViewData["Title"] = "RequestDetails";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+@using (Html.BeginForm("RequestDetails", "Request", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.CompId , new{@class="form-control", @disabled = "disabled"})
+    <b style="color:white">Name</b>
+    @Html.TextBoxFor(x=>x.ReqName, new{@class="form-control", @disabled = "disabled"})
+        <br />
+    <b style="color:white">Surname</b>
+    @Html.TextBoxFor(x=>x.ReqtSurname, new{@class="form-control", @disabled = "disabled"})
+        <br />
+    <b style="color:white">Universty</b>
+    @Html.TextBoxFor(x=>x.ReqUni, new{@class="form-control", @disabled = "disabled"})
+        <br />
+    <b style="color:white">Department</b>
+    @Html.TextBoxFor(x=>x.ReqDepart, new{@class="form-control", @disabled = "disabled"})
+        <br />
+    <b style="color:white">Class</b>
+    @Html.TextBoxFor(x=>x.ReqClass, new{@class="form-control", @disabled = "disabled"})
+        <br />
+    <b style="color:white">Mail Address</b>
+    @Html.TextBoxFor(x=>x.ReqMail, new{@class="form-control", @disabled = "disabled"})
+        <br />
+    <b style="color:white">Phone Number</b>
+    @Html.TextBoxFor(x=>x.ReqNumber, new{@class="form-control", @disabled = "disabled"})
+        <br />
+    <b style="color:white">GitHub</b>
+    @Html.TextBoxFor(x=>x.ReqGitHub, new{@class="form-control", @disabled = "disabled"})
+        <br />
+    <b style="color:white">Leangues</b>
+    @Html.TextBoxFor(x=>x.ReqLengues, new{@class="form-control", @disabled = "disabled"})
+        <br />
+    <b style="color:white">Aim</b>
+    @Html.TextBoxFor(x=>x.ReqWant, new{@class="form-control", @disabled = "disabled"})
+        <br />
+    <b style="color:white">Company</b>
+    @Html.TextBoxFor(x=>x.CompId, new{@class="form-control", @disabled = "disabled"})
+}
+

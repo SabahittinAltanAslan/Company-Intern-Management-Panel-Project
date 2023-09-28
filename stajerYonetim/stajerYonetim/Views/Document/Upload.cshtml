@@ -1,0 +1,29 @@
+﻿@model List<Document>
+@{
+    ViewData["Title"] = "Upload";
+    Layout = "~/Views/Shared/Intern_Layout.cshtml";
+}
+
+<br />
+<table class="table table-bordered" style="color:white">
+    <tr>
+        <td>Project Name</td>
+        <td>Delete</td>
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.OriginalFileName</td>
+            <td><a href="#" class="btn btn-primary">Delete</a></td>
+
+        </tr>
+    }
+</table>
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <input style="color:white" type="file" name="pdfFile" />
+    <button type="submit">Yükle</button>
+</form>
+

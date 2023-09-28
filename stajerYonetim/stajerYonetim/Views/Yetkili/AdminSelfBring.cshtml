@@ -1,0 +1,29 @@
+﻿@model Admin
+@{
+    ViewData["Title"] = "AdminSelfBring";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("AdminSelfUpdate", "Yetkili", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.AdminId , new{@class="form-control"})
+    <b style="color:white">Name</b>
+    @Html.TextBoxFor(x=>x.AdminName, new{@class="form-control"})
+    <br />
+    <b style="color:white">Surname</b>
+    @Html.TextBoxFor(x=>x.AdminSurname, new{@class="form-control"})
+    <br />
+    <b style="color:white">UserName</b>
+    @Html.TextBoxFor(x=>x.UserName, new{@class="form-control"})
+    <br />
+    <b style="color:white">Password</b>
+    @Html.TextBoxFor(x=>x.Password, new{@class="form-control"})
+    <br />
+    <b style="color:white">Company</b>
+    @Html.TextBoxFor(x=>x.CompId, new{@class="form-control"})
+    <br />
+    <button class="btn btn-primary">Edit</button>
+
+}
+

@@ -1,0 +1,43 @@
+﻿@model Intern
+@{
+    ViewData["Title"] = "InternDetails";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+@*BU Sayfa Kullanımdan kaldırıldı geri eklenmek isterse diye kodlar saklanıyor.*@
+
+@using (Html.BeginForm("InternDetails", "Stajer", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.CompId , new{@class="form-control", @disabled = "disabled"})
+    <b style ="color:white">Name</b>
+    @Html.TextBoxFor(x=>x.InternName, new{@class="form-control", @disabled = "disabled"})
+    <br />
+    <b style="color:white">Surname</b>
+    @Html.TextBoxFor(x=>x.InterntSurname, new{@class="form-control", @disabled = "disabled"})
+    <br />
+    <b style="color:white">Universty</b>
+    @Html.TextBoxFor(x=>x.InternUni, new{@class="form-control", @disabled = "disabled"})
+    <br />
+    <b style="color:white">Department</b>
+    @Html.TextBoxFor(x=>x.InternDepart, new{@class="form-control", @disabled = "disabled"})
+    <br />
+    <b style="color:white">Class</b>
+    @Html.TextBoxFor(x=>x.InternClass, new{@class="form-control", @disabled = "disabled"})
+    <br />
+    <b style="color:white">Mail Address</b>
+    @Html.TextBoxFor(x=>x.InternMail, new{@class="form-control", @disabled = "disabled"})
+    <br />
+    <b style="color:white">Phone Number</b>
+    @Html.TextBoxFor(x=>x.InternNumber, new{@class="form-control", @disabled = "disabled"})
+    <br />
+    <b style="color:white">GitHub</b>
+    @Html.TextBoxFor(x=>x.InternGitHub, new{@class="form-control", @disabled = "disabled"})
+    <br />
+    <b style="color:white">Leangues</b>
+    @Html.TextBoxFor(x=>x.InternLengues, new{@class="form-control", @disabled = "disabled"})
+    <br />
+    <b style="color:white">Aim</b>
+    @Html.TextBoxFor(x=>x.InternWant, new{@class="form-control", @disabled = "disabled"})
+    <br />
+    <b style="color:white">Company</b>
+    @Html.TextBoxFor(x=>x.CompId, new{@class="form-control", @disabled = "disabled"})
+}

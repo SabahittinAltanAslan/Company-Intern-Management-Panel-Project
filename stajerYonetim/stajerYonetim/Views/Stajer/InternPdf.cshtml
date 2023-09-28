@@ -1,0 +1,24 @@
+﻿@model stajerYonetim.Models.PdfRecord
+@{
+    ViewData["Title"] = "InternPdf";
+    Layout = "~/Views/Shared/Intern_Layout.cshtml";
+}
+
+<br />
+<table class="table table-bordered" style="color:white">
+    <tr>
+        <td>Project Name</td>
+        <td>Project Managers Id's</td>
+        <td>Download</td>
+
+
+    </tr>
+
+        <tr>
+        <td>@Html.TextAreaFor(x=>x.OriginalFileName , new{@class="form-control",@disabled="disabled"})</td>
+        <td>@Html.TextAreaFor(x=>x.InternId , new{@class="form-control",@disabled="disabled"})</td>
+        <td>@Html.ActionLink("Download", "DownloadPdf", "Pdf", new { id = Model.Id }, new { @class = "btn btn-primary" })</td>
+        </tr>
+    }
+</table>
+

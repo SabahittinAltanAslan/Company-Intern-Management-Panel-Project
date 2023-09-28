@@ -1,0 +1,33 @@
+﻿@model List<PdfRecord>
+@{
+    ViewData["Title"] = "Upload";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<br />
+<table class="table table-bordered" style="color:white">
+    <tr>
+        <td>Project Name</td>
+        <td>Project Managers Id's</td>
+        <td>Update</td>
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.OriginalFileName</td>
+            <td>@x.InternId</td>
+            <td><a href="/Pdf/FileBring/@x.Id" class="btn btn-primary">Update</a></td>
+
+        </tr>
+    }
+</table>
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <input style="color:white" type="file" name="pdfFile" />
+    <button type="submit">Yükle</button>
+</form>
+
+
+

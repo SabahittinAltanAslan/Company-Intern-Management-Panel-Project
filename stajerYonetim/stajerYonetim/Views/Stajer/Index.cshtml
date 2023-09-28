@@ -1,0 +1,30 @@
+﻿@using stajerYonetim.Models
+@model List<Intern>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Intern_Layout.cshtml";
+}
+<table class="table table-bordered" style="color:white">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Surname</td>
+        <td>Company</td>
+        <td>Update</td>
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.InternId</td>
+            <td>@x.InternName</td>
+            <td>@x.InterntSurname</td>
+            <td>@x.Company.CompName</td>
+            <td><a href="/Stajer/InternSelfBring/@x.InternId" class="btn btn-success">Update</a></td>
+
+        </tr>
+    }
+</table>
+
+

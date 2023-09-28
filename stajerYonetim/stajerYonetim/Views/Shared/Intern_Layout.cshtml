@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+
+
+<body class="bg-dark">
+
+    <!-- Sidebar -->
+    <h6 class="w3-sidebar w3-light-grey w3-bar-block bg-dark" style="width:20%">
+        <a href="/Stajer/Index/" class="w3-bar-item w3-button border-bottom:1px solid btn-outline-light"> My<span style="color:#0BDFE3"> Panel</span> </a>
+        <a href="/Stajer/InternPdf/" class="w3-bar-item w3-button  border-bottom:1px solid btn-outline-light" style="box-shadow:1px 1px 25px white">My <span style="color:#0BDFE3">Projects</span></a>
+        <a href="/Document/Upload/" class="w3-bar-item w3-button border-bottom:1px solid btn-outline-light" style="box-shadow:1px 1px 25px white">My <span style="color:#0BDFE3">Documents</span></a>
+        <a href="#" class="w3-bar-item w3-button  border-bottom:1px solid btn-outline-light" style="box-shadow:1px 1px 25px white">Announ<span style="color:#0BDFE3">cements</span></a>
+        <a href="~/Login/LogOut/" class="w3-bar-item w3-button  border-bottom:1px solid btn-outline-light" style="box-shadow:1px 1px 25px white">Qu<span style="color:#0BDFE3">it</span></a>
+
+
+    </h6>
+
+    <!-- Page Content -->
+    <div style="margin-left:20%;">
+        <div class="w3-container w3-teal bg-dark" style=" padding:1.5rem; text-transform:uppercase; display:flex; justify-content:center;align-items:center;">
+            <h1 style="box-shadow:1px 1px 25px white">Intern <span style="color:#0BDFE3">Account</span></h1>
+        </div>
+
+
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+
+    </div>
+
+</body>
+</html>

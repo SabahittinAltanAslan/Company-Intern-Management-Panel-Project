@@ -1,0 +1,25 @@
+﻿@model PdfRecord
+@{
+    ViewData["Title"] = "FileBring";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+<br />
+@*<div class="alert-danger">
+    @if (ViewData["DontFoundFlag"] != null)
+    {
+        @ViewData["DontFoundFlag"]
+    }
+</div>*@
+@using (Html.BeginForm("FileUpdate", "Pdf", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.Id, new{@class="form-control"})
+    <b style="color:white">File Name</b>
+    @Html.TextBoxFor(x=>x.OriginalFileName, new{@class="form-control"})
+    <br />
+    <b style="color:white">Project Managers Id's</b>
+    @Html.TextBoxFor(x=>x.InternId, new{@class="form-control"})
+    <br />
+    <button class="btn btn-primary">Edit</button>
+
+}
+

@@ -1,0 +1,30 @@
+﻿@model List<Admin>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<br />
+<table class="table table-bordered" style="color:white">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Surname</td>
+        <td>Company</td>
+        <td>Update</td>
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.AdminId</td>
+            <td>@x.AdminName</td>
+            <td>@x.AdminSurname</td>
+            <td>@x.Company.CompName</td>
+            <td><a href="/Yetkili/AdminSelfBring/@x.AdminId" class="btn btn-primary">Update</a></td>
+
+        </tr>
+    }
+</table>
+

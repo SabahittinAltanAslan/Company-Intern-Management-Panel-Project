@@ -1,0 +1,35 @@
+﻿@model List<Intern>
+@{
+    ViewData["Title"] = "InternView";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<br />
+<table class="table table-bordered" style="color:white">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Surname</td>
+        <td>Company</td>
+        <td>Delete</td>
+        <td>Update</td>
+        <td>Documents</td>
+
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.InternId</td>
+            <td>@x.InternName</td>
+            <td>@x.InterntSurname</td>
+            <td>@x.Company.CompName</td>
+            <td>@Html.ActionLink("Delete","InternDelete","Stajer",new{id=x.InternId}, new{@class="btn btn-danger",onclick="return confirm('Are you sure you want to delete this person?')"})</td>
+            <td><a href="/Stajer/InternBring/@x.InternId" class="btn btn-primary">Update</a></td>
+            <td><a href="/Document/CheckDocument/@x.InternId" class="btn btn-default" style=" background-color:darkorange;  color:aliceblue;">Documents</a></td>
+        </tr>
+    }
+</table>
+
+
